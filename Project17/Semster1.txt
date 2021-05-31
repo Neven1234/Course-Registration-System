@@ -1,0 +1,4 @@
+CIS160        Introduction to Computer Science   1000                    3
+BSC121	        Physics1                         1100                    3	
+BSC122	        Calculus1                        900                     3	
+BSC123	      Probability and Statistics         950                     3

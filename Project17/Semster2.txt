@@ -1,0 +1,4 @@
+CIS150	        Structured Programming	           1000              3	
+CIS124	        Electronics	                   900               4	
+BSC125	        Calculus 2	                   850               3	
+BSC126	        Physics 2	                   800               3

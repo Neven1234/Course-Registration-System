@@ -1,0 +1,4 @@
+CIS270	        Data Structures	                      1200         3	
+CIS220	        Computer Organization & Architecture  1000         3	
+BSC225	        Linear Algebra	                      950          3	
+CIS243	        Artificial Intelligence	              1000         3	
