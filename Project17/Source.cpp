@@ -8,7 +8,7 @@ int main()
 {
 	CourseData c;
 	int n,s;
-	cout << "semster?" << endl;
+	cout << "Enter Semster?" << endl;
 	cin >> s;
 	if (s == 1)
 	{
