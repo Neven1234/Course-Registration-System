@@ -28,7 +28,7 @@ int main()
 	}
 	else if (s == 2)
 	{
-		cout << "1-all courses   2-search" << endl;
+		cout << "1-All courses   2-Search" << endl;
 		cin >> n;
 		if (n == 1)
 		{
