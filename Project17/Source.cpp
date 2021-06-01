@@ -24,7 +24,7 @@ int main()
 			c.search1();
 		}
 		else
-			cout << "Wrong number" << endl;
+			cout << "Wrong Number" << endl;
 	}
 	else if (s == 2)
 	{
