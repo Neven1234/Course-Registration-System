@@ -16,62 +16,62 @@ int main()
 	int n;
 	cout << "Enter Semster?" << endl;
 	cin >> student.semster;
-	if (student.semster == 1)
+	 if (student.semster ==1)
+  {
+	student.long_in();
+	if (!student.isTrue)
+	{ 
+		cout << "wrong data yaba" << endl;
+	}
+	else
 	{
-		student.long_in();
-		if (!student.isTrue)
+		cout << "1- all courses   2- search 3- add course" << endl;
+		cin >> n;
+		if (n == 1)
 		{
-			cout << "wrong data yaba" << endl;
+			student.display1();
+
+		}
+		else if (n == 2)
+		{
+			student.search1();
+		}
+		else if (n == 3)
+		{
+			student.registerForCourse(student.count);
 		}
 		else
-		{
-			cout << "1- all courses   2- search 3- add course" << endl;
-			cin >> n;
-			if (n == 1)
-			{
-				student.display1();
-
-			}
-			else if (n == 2)
-			{
-				student.search1();
-			}
-			else if (n == 3)
-			{
-				student.registerForCourse(student.count);
-			}
-			else
-				cout << "Wrong number" << endl;
-		}
+			cout << "Wrong number" << endl;
 	}
-	else if (student.semster == 2)
-	{
-		student.long_in();
-		if (!student.isTrue)
-		{
-			cout << "wrong data yaba" << endl;
-		}
-		else
-		{
-			cout << "1- all courses   2- search 3- add course" << endl;
-			cin >> n;
-			if (n == 1)
-			{
-				student.display2();
+  }
+	else 	 if (student.semster == 2)
+	 {
+		 student.long_in();
+		 if (!student.isTrue)
+		 {
+			 cout << "wrong data yaba" << endl;
+		 }
+		 else
+		 {
+			 cout << "1- all courses   2- search 3- add course" << endl;
+			 cin >> n;
+			 if (n == 1)
+			 {
+				 student.display2();
 
-			}
-			else if (n == 2)
-			{
-				student.search2();
-			}
-			else if (n == 3)
-			{
-				student.registerForCourse(student.count);
-			}
-			else
-				cout << "Wrong number" << endl;
-		}
-	}
+			 }
+			 else if (n == 2)
+			 {
+				 student.search2();
+			 }
+			 else if (n == 3)
+			 {
+				 student.registerForCourse(student.count);
+			 }
+			 else
+				 cout << "Wrong number" << endl;
+		 }
+	 }
 	else if (student.semster == 3)
 	{
 		student.long_in();

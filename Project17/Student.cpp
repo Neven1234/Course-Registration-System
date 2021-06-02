@@ -9,7 +9,8 @@ using namespace std;
 
 void Student::long_in()
 {
-	string us, pass;
+	string us,  pass /*, ID,course1, course2, course3, course4*/;
+	//vector<string> v;
 	cout << "Enter Your Academic Year" << endl;
 	cin >> academicYear;
 	if (academicYear == 1)
@@ -175,17 +176,6 @@ void Student::movetousers(int number1, int number2, int number3, int number4 , s
 	mainfile << v[number1 - 1] << endl << v[number2 - 1] << endl << v[number3 - 1] << endl << v[number4 - 1] << endl;
 	mainfile.close();
 }
-//void Student::edite(string email,string password,string c)
-//{
-//	cout << email << endl << password << endl;
-//	string tst = "student-2-" + c + ".txt";
-//	fstream read(tst,ios::out);
-//	{
-//
-//	}
-//
-//
-//}
 void Student::display1()
 {
 
