@@ -9,8 +9,7 @@ using namespace std;
 
 void Student::long_in()
 {
-	string us,  pass /*, ID,course1, course2, course3, course4*/;
-	//vector<string> v;
+	string us, pass;
 	cout << "Enter Your Academic Year" << endl;
 	cin >> academicYear;
 	if (academicYear == 1)
