@@ -1,4 +1,4 @@
-CIS250	        Object Oriented Programming	   950               3	
-BSC221	        Discrete Mathematics        	   900               3	
-CIS260	        Logic Design	                   1000              3	
-CIS280	        Database Management Systems	   1100              3
+CIS250	        Object Oriented Programming	   950               3	             CIS150. Structured Programming
+BSC221	        Discrete Mathematics        	   900               3	             --
+CIS260	        Logic Design	                   1000              3	             BSC121. Physics 1
+CIS280	        Database Management Systems	   1100              3               CIS150. Structured Programming
