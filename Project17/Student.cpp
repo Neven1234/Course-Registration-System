@@ -180,6 +180,9 @@ void Student::edite(string email,string password,string c)
 	cout << email << endl << password << endl;
 	string tst = "student-2-" + c + ".txt";
 	fstream read(tst,ios::out);
+	{
+
+	}
 
 
 }
