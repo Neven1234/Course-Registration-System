@@ -19,7 +19,7 @@ void Student::long_in()
 		getline(cin, email);
 		cout << "password: " << endl;
 		getline(cin, password);
-		while (true)
+		for(int i=1;i<=C;i++)
 		{
 			string tst = "student-1-" + count + ".txt";
 			int counter = stoi(count);
@@ -39,6 +39,7 @@ void Student::long_in()
 			ss >> count;
 			isTrue = false;
 		}
+		
 		
 	}
 	if (academicYear == 2)
@@ -174,6 +175,11 @@ void Student::movetousers(int number1, int number2, int number3, int number4 , s
 	mainfile.open(filename, ios::out | ios::app);
 	mainfile << v[number1 - 1] << endl << v[number2 - 1] << endl << v[number3 - 1] << endl << v[number4 - 1] << endl;
 	mainfile.close();
+}
+void Student::edite(string email, string password, string c)
+{
+	string  newEmail,newPass,file = "student" + academicYear + '-' + c + ".txt";
+	fstream dataEdite(file, ios::out);
 }
 void Student::display1()
 {

@@ -1,13 +1,14 @@
 #include "Admin.h"
 #include<fstream>
 #include<string>
+#include"Student.h"
 using namespace std;
 
 
 bool Admin::long_in()
 {
 	
-
+	
 	string name;
 	string password;
 	string us;
@@ -32,6 +33,7 @@ bool Admin::long_in()
 
 void Admin::addStudent()
 {
+	Student s;
 	cout << "which year?" << endl;
 	string year; cin >> year;
 	cout << "student number" << endl;
@@ -44,10 +46,11 @@ void Admin::addStudent()
 	cout << "password : 1234" << endl;
 	string password = "1234";
 	cout << "ID :"; int id; cin >> id;
-	string filename = "student" + year + '-' + count+".txt";
+	string filename = "student-" + year + '-' + count+".txt";
 	fstream year_sem;
 	year_sem.open(filename, ios::out | ios::app);
 	year_sem << name << endl << password << endl << id  << endl;
 	year_sem.close();
+	s.C++;
 
 }

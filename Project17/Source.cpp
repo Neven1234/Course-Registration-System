@@ -11,7 +11,7 @@ int main()
 	CourseData c;
 	Student student;
 	Admin admin; 
-	//admin.addStudent();
+	/*admin.addStudent();*/
 	string email, password, academicYear;
 	int n;
 	cout << "Enter Semster?" << endl;
