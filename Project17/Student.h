@@ -5,7 +5,7 @@ using namespace std;
 class Student
 {
 public:
-	string email, password, SavilableHours, count = "1";
+	string username, password, SavilableHours, count = "1";
 	int academicYear, semster , avilableHours,C=2;
 	bool isTrue;
 

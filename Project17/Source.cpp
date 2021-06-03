@@ -14,18 +14,18 @@ int main()
 	/*admin.addStudent();*/
 	string email, password, academicYear;
 	int n;
-	cout << "Enter Semster?" << endl;
+	cout << "Enter Your Semster" << endl;
 	cin >> student.semster;
 	 if (student.semster ==1)
   {
 	student.long_in();
 	if (!student.isTrue)
 	{ 
-		cout << "wrong data yaba" << endl;
+		cout << "Wrong data!" << endl;
 	}
 	else
 	{
-		cout << "1- all courses   2- search 3- add course" << endl;
+		cout << "1-View All Courses   2-Search   3-Add New Course" << endl;
 		cin >> n;
 		if (n == 1)
 		{
@@ -49,11 +49,11 @@ int main()
 		 student.long_in();
 		 if (!student.isTrue)
 		 {
-			 cout << "wrong data yaba" << endl;
+			 cout << "Wrong data!" << endl;
 		 }
 		 else
 		 {
-			 cout << "1- all courses   2- search 3- add course" << endl;
+			 cout << "1-View All Courses   2-Search   3-Add New Course" << endl;
 			 cin >> n;
 			 if (n == 1)
 			 {
@@ -77,11 +77,11 @@ int main()
 		student.long_in();
 		if (!student.isTrue)
 		{
-			cout << "wrong data yaba" << endl;
+			cout << "Wrong data!" << endl;
 		}
 		else
 		{
-			cout << "1- all courses   2- search 3- add course" << endl;
+			cout << "1-View All Courses   2-Search   3-Add New Course" << endl;
 			cin >> n;
 			if (n == 1)
 			{
@@ -105,11 +105,11 @@ int main()
 		student.long_in();
 		if (!student.isTrue)
 		{
-			cout << "wrong data yaba" << endl;
+			cout << "Wrong data!" << endl;
 		}
 		else
 		{
-			cout << "1- all courses   2- search 3- add course" << endl;
+			cout << "1-View All Courses   2-Search   3-Add New Course" << endl;
 			cin >> n;
 			if (n == 1)
 			{

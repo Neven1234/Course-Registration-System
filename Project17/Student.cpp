@@ -14,10 +14,10 @@ void Student::long_in()
 	cin >> academicYear;
 	if (academicYear == 1)
 	{
-		cout << "email: " << endl;
+		cout << "Username: " << endl;
 		cin.ignore();
-		getline(cin, email);
-		cout << "password: " << endl;
+		getline(cin, username);
+		cout << "Password: " << endl;
 		getline(cin, password);
 		for(int i=1;i<=C;i++)
 		{
@@ -26,7 +26,7 @@ void Student::long_in()
 			ifstream read2(tst);
 			getline(read2, us);
 			getline(read2, pass);
-			if (us == email && pass == password)
+			if (us == username && pass == password)
 			{				
 				read2.close();
 				isTrue = true;
@@ -39,15 +39,14 @@ void Student::long_in()
 			ss >> count;
 			isTrue = false;
 		}
-		
-		
 	}
+
 	if (academicYear == 2)
 	{
-		cout << "email: " << endl;
+		cout << "Username: " << endl;
 		cin.ignore();
-		getline(cin, email);
-		cout << "password: " << endl;
+		getline(cin, username);
+		cout << "Password: " << endl;
 		getline(cin, password);
 		while (true)
 		{
@@ -56,7 +55,7 @@ void Student::long_in()
 			ifstream read2(tst);
 			getline(read2, us);
 			getline(read2, pass);
-			if (us == email && pass == password)
+			if (us == username && pass == password)
 			{
 				read2.close();
 				isTrue = true;
@@ -198,7 +197,7 @@ void Student::display1()
 		}
 		vector<string>::iterator it;
 		it = v.begin();
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		while (it != v.end())
 		{
 
@@ -216,7 +215,7 @@ void Student::search1()
 	string line;
 	vector<string> v;
 	string  name;
-	cout << "enter the name of the course" << endl;
+	cout << "Enter Name of the Course" << endl;
 	cin.ignore();
 	getline(cin, name);
 
@@ -234,22 +233,22 @@ void Student::search1()
 	}
 	if (name == "Introduction to Computer Science")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[0] << endl;
 	}
 	else if (name == "Physics1")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 
 	}
 	else if (name == "Calculus1")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[2] << endl;
 	}
 	else if (name == "Probability and Statistics")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[3];
 	}
 
@@ -270,7 +269,7 @@ void Student::display2()
 		}
 		vector<string>::iterator it;
 		it = v.begin();
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		while (it != v.end())
 		{
 
@@ -287,7 +286,7 @@ void Student::search2()
 	string line;
 	vector<string> v;
 	string  name;
-	cout << "enter the name of the course" << endl;
+	cout << "Enter Name of the Course" << endl;
 	cin.ignore();
 	getline(cin, name);
 
@@ -305,22 +304,22 @@ void Student::search2()
 	}
 	if (name == "Structured Programming")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[0] << endl;
 	}
 	else if (name == "Electronics")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[1] << endl;
 	}
 	else if (name == "Calculus 2")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[2] << endl;
 	}
 	else if (name == "Physics 2")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[3];
 	}
 
@@ -341,7 +340,7 @@ void Student::display3()
 		}
 		vector<string>::iterator it;
 		it = v.begin();
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		while (it != v.end())
 		{
 
@@ -358,7 +357,7 @@ void Student::search3()
 	string line;
 	vector<string> v;
 	string  name;
-	cout << "enter the name of the course" << endl;
+	cout << "Enter Name of the Course" << endl;
 	cin.ignore();
 	getline(cin, name);
 
@@ -376,22 +375,22 @@ void Student::search3()
 	}
 	if (name == "Object Oriented Programming")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[0] << endl;
 	}
 	else if (name == "Discrete Mathematics ")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[1] << endl;
 	}
 	else if (name == "Logic Design")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[2] << endl;
 	}
 	else if (name == "Database Management Systems")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[3];
 	}
 
@@ -412,7 +411,7 @@ void Student::display4()
 		}
 		vector<string>::iterator it;
 		it = v.begin();
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		while (it != v.end())
 		{
 
@@ -429,7 +428,7 @@ void Student::search4()
 	string line;
 	vector<string> v;
 	string  name;
-	cout << "enter the name of the course" << endl;
+	cout << "Enter Name of the Course" << endl;
 	cin.ignore();
 	getline(cin, name);
 
@@ -447,22 +446,22 @@ void Student::search4()
 	}
 	if (name == "Data Structures")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[0] << endl;
 	}
 	else if (name == "Computer Organization & Architecture")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[1] << endl;
 	}
 	else if (name == "Linear Algebra")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[2] << endl;
 	}
 	else if (name == "Artificial Intelligence")
 	{
-		cout << "course code             course name                  maxmum student         course hours    Prequisites" << endl;
+		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 		cout << v[3];
 	}
 }
