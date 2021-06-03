@@ -6,7 +6,8 @@ class Student
 {
 public:
 	string username, password, SavilableHours, count = "1";
-	int academicYear, semster , avilableHours,C=2;
+	int academicYear, semster , avilableHours,id;
+	int Files=2;
 	bool isTrue;
 
 public:

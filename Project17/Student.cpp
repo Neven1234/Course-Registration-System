@@ -19,7 +19,7 @@ void Student::long_in()
 		getline(cin, username);
 		cout << "Password: " << endl;
 		getline(cin, password);
-		for(int i=1;i<=C;i++)
+		for(int i=1;i<=Files;i++)
 		{
 			string tst = "student-1-" + count + ".txt";
 			int counter = stoi(count);
@@ -48,7 +48,7 @@ void Student::long_in()
 		getline(cin, username);
 		cout << "Password: " << endl;
 		getline(cin, password);
-		while (true)
+		for (int i = 1;i <= Files;i++)
 		{
 			string tst = "student-2-" + count + ".txt";
 			int counter = stoi(count);
@@ -68,7 +68,6 @@ void Student::long_in()
 			ss >> count;
 			isTrue = false;
 		}
-
 	}
 	
 }

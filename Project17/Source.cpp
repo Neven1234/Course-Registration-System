@@ -9,11 +9,34 @@ using namespace std;
 int main()
 {
 	CourseData c;
-	Student student;
+	Student student;//coscos
 	Admin admin; 
 	/*admin.addStudent();*/
 	string email, password, academicYear;
-	int n;
+	int n,userChoice,adminChoice;
+
+	cout << "1-Admin 2-Student" << endl;
+		cin >> userChoice;
+		if (userChoice == 1)
+		{
+			admin.long_in();
+			if (!admin.isTrue)
+			{
+				cout << endl;
+				cout << "Wrong data!" << endl;
+				admin.long_in();
+			}
+			cout << "Enter Your Choice" << endl;
+			cout << endl;
+			cout << "1-Add new Student" << endl << "2-Add new Course" << endl << "3-Enter Course Prerequisite" << endl
+				<< "4-View Students in Specific course" << endl << "5-View all courses in Specific Student" << endl
+				<< "6-Edit Courses Data" << endl << "7-Log out" << endl;
+			cin >> adminChoice;
+			if (adminChoice == 1)
+			{
+				admin.addStudent();
+			}
+		}
 	cout << "Enter Your Semster" << endl;
 	cin >> student.semster;
 	 if (student.semster ==1)
@@ -22,6 +45,7 @@ int main()
 	if (!student.isTrue)
 	{ 
 		cout << "Wrong data!" << endl;
+		student.long_in();
 	}
 	else
 	{
@@ -50,6 +74,7 @@ int main()
 		 if (!student.isTrue)
 		 {
 			 cout << "Wrong data!" << endl;
+			 student.long_in();
 		 }
 		 else
 		 {
@@ -78,6 +103,7 @@ int main()
 		if (!student.isTrue)
 		{
 			cout << "Wrong data!" << endl;
+			student.long_in();
 		}
 		else
 		{
@@ -106,6 +132,7 @@ int main()
 		if (!student.isTrue)
 		{
 			cout << "Wrong data!" << endl;
+			student.long_in();
 		}
 		else
 		{

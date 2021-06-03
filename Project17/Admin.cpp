@@ -4,15 +4,10 @@
 #include"Student.h"
 using namespace std;
 
-
 bool Admin::long_in()
 {
-	
-	
-	string name;
-	string password;
-	string us;
-	string pass;
+	string us,pass;
+	string name, password;
 	cout << "Name: " << endl;
 	cin.ignore();
 	getline(cin, name);
@@ -34,23 +29,28 @@ bool Admin::long_in()
 void Admin::addStudent()
 {
 	Student s;
-	cout << "which year?" << endl;
-	string year; cin >> year;
-	cout << "student number" << endl;
+	cout << "Enter Student Year" << endl;
+	 cin >> s.academicYear;
+	cout << "Student Number" << endl;
 	string count;
 	cin >> count;
-	cout << "name :";
-	string name;
+	cout << "Enter Student Name:";
+	s.username;
 	cin.ignore();
-	getline(cin, name);
-	cout << "password : 1234" << endl;
-	string password = "1234";
-	cout << "ID :"; int id; cin >> id;
-	string filename = "student-" + year + '-' + count+".txt";
+	getline(cin, s.username);
+	cout << "Enter Student Passowrd: " << endl;
+	cin.ignore();
+	getline(cin, s.password);
+	cout << "Enter Student ID: ";
+	cin >> s.id;
+	//cout << "Enter Student Finished Courses: ";
+	//cin >> s.;
+
+	string filename = "Student-" + s.academicYear + '-' + count+".txt";
 	fstream year_sem;
 	year_sem.open(filename, ios::out | ios::app);
-	year_sem << name << endl << password << endl << id  << endl;
+	year_sem << s.username << endl << s.password << endl << s.id  << endl;
 	year_sem.close();
-	s.C++;
+	s.Files++;
 
 }
