@@ -22,6 +22,6 @@ public:
 	void search4();
 	void registerForCourse(string C);
 	void movetousers(int number1, int number2, int number3 ,int number4 , string year, string semster, string studentNum);
-	void edite( string  email,string password,string c);
+	void edite(int academicYear, string c);
 };
 

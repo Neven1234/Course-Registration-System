@@ -13,27 +13,38 @@ fstream filesem;
 string CourseName, code;
 int max_num_of_students, hours;
 
-bool Admin::long_in()
+void Admin::long_in()
 {
-	string us,pass;
+
+	string us, pass, name, password;
 	cout << "Name: " << endl;
 	cin.ignore();
-	getline(cin, username);
+	getline(cin, name);
 	cout << "password: " << endl;
-	cin.ignore();
 	getline(cin, password);
-		ifstream read("Admin.txt");
-		while (read.good())
+	for (int i = 1; i <= 2; i++)
+	{
+		string tst = "Admin-" + s.count + ".txt";
+		int counter = stoi(s.count);
+		ifstream read2(tst);
+		getline(read2, us);
+		getline(read2, pass);
+		if (us == name && pass == password)
 		{
-			getline(read, us);
-			getline(read, pass);
-			if (us == username && pass == password)
-				return true;
+			read2.close();
+			isTrue = true;
+			break;
 		}
-	
-	return 0;
+		else
+			counter++;
+		stringstream ss;
+		ss << counter;
+		ss >> s.count;
+		isTrue = false;
+	}
 
 }
+
 
 void Admin::addStudent()
 {

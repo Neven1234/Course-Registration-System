@@ -8,20 +8,20 @@ using namespace std;
 int main()
 {
 	Student student;
-	Admin admin; 
+	Admin admin;
 	string email, password, academicYear;
-	int n,userChoice,adminChoice, studentChoice;
+	int n, userChoice, adminChoice, studentChoice;
 
 	cout << "1-Admin 2-Student" << endl;
-		cin >> userChoice;
-		if (userChoice == 1)
+	cin >> userChoice;
+	if (userChoice == 1)
+	{
+		admin.long_in();
+		if (!admin.isTrue)
 		{
+			cout << endl;
+			cout << "Wrong data!" << endl;
 			admin.long_in();
-			if (!admin.isTrue)
-			{
-				cout << "Wrong data!" << endl;
-				admin.long_in();
-			}
 			cout << "Enter Your Choice" << endl;
 			cout << endl;
 			cout << "1-Add new Student" << "\n" << "2-Add new Course" << "\n" << "3-Enter Course Prerequisite" << "\n"
@@ -41,12 +41,13 @@ int main()
 			{
 				admin.EditCourses();
 			}
-			while (adminChoice==7)
+			while (adminChoice == 7)
 			{
 				break;
 			}
 		}
-		if (userChoice == 2)
+	}
+		else if (userChoice == 2)
 		{
 			cout << "Enter Your Semester" << endl;
 			cin >> student.semster;
@@ -84,14 +85,14 @@ int main()
 				}
 				if (studentChoice == 5)
 				{
-
+					student.edite(student.academicYear,student.count);
 				}
 				while (studentChoice == 6)
 				{
 					break;
 				}
 			}
-			
+
 			if (student.semster == 2)
 			{
 				cout << "Enter Your Choice" << endl;
@@ -118,7 +119,7 @@ int main()
 				}
 				if (studentChoice == 5)
 				{
-
+					student.edite(student.academicYear, student.count);
 				}
 				while (studentChoice == 6)
 				{
@@ -152,14 +153,14 @@ int main()
 				}
 				if (studentChoice == 5)
 				{
-
+					student.edite(student.academicYear, student.count);
 				}
 				while (studentChoice == 6)
 				{
 					break;
 				}
 			}
-			
+
 			if (student.semster == 4)
 			{
 				cout << "Enter Your Choice" << endl;
@@ -186,7 +187,7 @@ int main()
 				}
 				if (studentChoice == 5)
 				{
-
+					student.edite(student.academicYear, student.count);
 				}
 				while (studentChoice == 6)
 				{
@@ -194,5 +195,5 @@ int main()
 				}
 			}
 		}
-	
-}
+
+	}

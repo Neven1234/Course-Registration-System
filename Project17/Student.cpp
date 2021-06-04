@@ -174,10 +174,352 @@ void Student::movetousers(int number1, int number2, int number3, int number4 , s
 	mainfile << v[number1 - 1] << endl << v[number2 - 1] << endl << v[number3 - 1] << endl << v[number4 - 1] << endl;
 	mainfile.close();
 }
-void Student::edite(string email, string password, string c)
+void Student::edite(int academicYear, string c)
 {
-	string  newEmail,newPass,file = "student" + academicYear + '-' + c + ".txt";
-	fstream dataEdite(file, ios::out);
+	if (academicYear == 1)
+	{
+		if (c == "1")
+		{
+			string newUserName, user, pass, newPassword;
+			int n;
+			string temp;
+			ifstream seek1;
+			ofstream seek2;
+			seek1.open("student-1-1.txt");
+			seek2.open("temp.txt");
+			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			if (n == 1)
+			{
+				cout << "enter your old username\n";
+				cin.ignore();
+				getline(cin, user);
+				cout << "Enter the new username\n";
+				getline(cin, newUserName);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(user) != string::npos)
+					{
+						temp.replace(temp.find(user), user.length(), newUserName);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-1-1.txt");
+				rename("temp.txt", "student-1-1.txt");
+			}
+			else if (n == 2)
+			{
+				cout << "enter your old password\n";
+				cin.ignore();
+				getline(cin, pass);
+				cout << "Enter the new passwoed\n";
+				getline(cin, newPassword);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(pass) != string::npos)
+					{
+						temp.replace(temp.find(pass), pass.length(), newPassword);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-1-1.txt");
+				rename("temp.txt", "student-1-1.txt");
+			}
+
+		}
+		else if (c == "2")
+		{
+			string newUserName, user, pass, newPassword;
+			int n;
+			string temp;
+			ifstream seek1;
+			ofstream seek2;
+			seek1.open("student-1-2.txt");
+			seek2.open("temp.txt");
+			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			if (n == 1)
+			{
+				cout << "enter your old username\n";
+				cin.ignore();
+				getline(cin, user);
+				cout << "Enter the new username\n";
+				getline(cin, newUserName);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(user) != string::npos)
+					{
+						temp.replace(temp.find(user), user.length(), newUserName);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-1-2.txt");
+				rename("temp.txt", "student-1-2.txt");
+			}
+			else if (n == 2)
+			{
+				cout << "enter your old password\n";
+				cin.ignore();
+				getline(cin, pass);
+				cout << "Enter the new passwoed\n";
+				getline(cin, newPassword);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(pass) != string::npos)
+					{
+						temp.replace(temp.find(pass), pass.length(), newPassword);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-1-2.txt");
+				rename("temp.txt", "student-1-2.txt");
+			}
+
+		}
+		else if (c == "3")
+		{
+			string newUserName, user, pass, newPassword;
+			int n;
+			string temp;
+			ifstream seek1;
+			ofstream seek2;
+			seek1.open("student-1-3.txt");
+			seek2.open("temp.txt");
+			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			if (n == 1)
+			{
+				cout << "enter your old username\n";
+				cin.ignore();
+				getline(cin, user);
+				cout << "Enter the new username\n";
+				getline(cin, newUserName);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(user) != string::npos)
+					{
+						temp.replace(temp.find(user), user.length(), newUserName);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-1-3.txt");
+				rename("temp.txt", "student-1-3.txt");
+			}
+			else if (n == 2)
+			{
+				cout << "enter your old password\n";
+				cin.ignore();
+				getline(cin, pass);
+				cout << "Enter the new passwoed\n";
+				getline(cin, newPassword);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(pass) != string::npos)
+					{
+						temp.replace(temp.find(pass), pass.length(), newPassword);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-1-3.txt");
+				rename("temp.txt", "student-1-3.txt");
+			}
+
+		}
+	}
+
+	if (academicYear == 2)
+	{
+		if (c == "1")
+		{
+			string newUserName, user, pass, newPassword;
+			int n;
+			string temp;
+			ifstream seek1;
+			ofstream seek2;
+			seek1.open("student-2-1.txt");
+			seek2.open("temp.txt");
+			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			if (n == 1)
+			{
+				cout << "enter your old username\n";
+				cin.ignore();
+				getline(cin, user);
+				cout << "Enter the new username\n";
+				getline(cin, newUserName);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(user) != string::npos)
+					{
+						temp.replace(temp.find(user), user.length(), newUserName);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-2-1.txt");
+				rename("temp.txt", "student-2-1.txt");
+			}
+			else if (n == 2)
+			{
+				cout << "enter your old password\n";
+				cin.ignore();
+				getline(cin, pass);
+				cout << "Enter the new passwoed\n";
+				getline(cin, newPassword);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(pass) != string::npos)
+					{
+						temp.replace(temp.find(pass), pass.length(), newPassword);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-2-1.txt");
+				rename("temp.txt", "student-2-1.txt");
+			}
+
+		}
+		else if (c == "2")
+		{
+			string newUserName, user, pass, newPassword;
+			int n;
+			string temp;
+			ifstream seek1;
+			ofstream seek2;
+			seek1.open("student-2-2.txt");
+			seek2.open("temp.txt");
+			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			if (n == 1)
+			{
+				cout << "enter your old username\n";
+				cin.ignore();
+				getline(cin, user);
+				cout << "Enter the new username\n";
+				getline(cin, newUserName);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(user) != string::npos)
+					{
+						temp.replace(temp.find(user), user.length(), newUserName);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-2-2.txt");
+				rename("temp.txt", "student-2-2.txt");
+			}
+			else if (n == 2)
+			{
+				cout << "enter your old password\n";
+				cin.ignore();
+				getline(cin, pass);
+				cout << "Enter the new passwoed\n";
+				getline(cin, newPassword);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(pass) != string::npos)
+					{
+						temp.replace(temp.find(pass), pass.length(), newPassword);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-2-2.txt");
+				rename("temp.txt", "student-2-2.txt");
+			}
+
+		}
+		else if (c == "3")
+		{
+			string newUserName, user, pass, newPassword;
+			int n;
+			string temp;
+			ifstream seek1;
+			ofstream seek2;
+			seek1.open("student-2-3.txt");
+			seek2.open("temp.txt");
+			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			if (n == 1)
+			{
+				cout << "enter your old username\n";
+				cin.ignore();
+				getline(cin, user);
+				cout << "Enter the new username\n";
+				getline(cin, newUserName);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(user) != string::npos)
+					{
+						temp.replace(temp.find(user), user.length(), newUserName);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-2-3.txt");
+				rename("temp.txt", "student-2-3.txt");
+			}
+			else if (n == 2)
+			{
+				cout << "enter your old password\n";
+				cin.ignore();
+				getline(cin, pass);
+				cout << "Enter the new passwoed\n";
+				getline(cin, newPassword);
+
+				while (getline(seek1, temp))
+				{
+					if (temp.find(pass) != string::npos)
+					{
+						temp.replace(temp.find(pass), pass.length(), newPassword);
+					}
+					seek2 << temp << endl;
+
+				}
+				seek1.close();
+				seek2.close();
+				remove("student-2-3.txt");
+				rename("temp.txt", "student-2-3.txt");
+			}
+
+		}
+	}
+
 }
 void Student::display1()
 {
