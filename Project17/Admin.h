@@ -8,8 +8,7 @@ public:
 public:
 	void long_in();
 	void addStudent();
-	void EditCourses();
-	void SearchCourses();
+	void EditCourses(int semester);
 	void AddCourse();
 };
 

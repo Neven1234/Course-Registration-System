@@ -187,13 +187,13 @@ void Student::edite(int academicYear, string c)
 			ofstream seek2;
 			seek1.open("student-1-1.txt");
 			seek2.open("temp.txt");
-			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			cout << "1-Edit username   2-Edit password" << endl; cin >> n;
 			if (n == 1)
 			{
-				cout << "enter your old username\n";
+				cout << "Enter Your old Username\n";
 				cin.ignore();
 				getline(cin, user);
-				cout << "Enter the new username\n";
+				cout << "Enter the new Username\n";
 				getline(cin, newUserName);
 
 				while (getline(seek1, temp))
@@ -212,10 +212,10 @@ void Student::edite(int academicYear, string c)
 			}
 			else if (n == 2)
 			{
-				cout << "enter your old password\n";
+				cout << "Enter Your old Password\n";
 				cin.ignore();
 				getline(cin, pass);
-				cout << "Enter the new passwoed\n";
+				cout << "Enter the new Passwoed\n";
 				getline(cin, newPassword);
 
 				while (getline(seek1, temp))
@@ -243,13 +243,14 @@ void Student::edite(int academicYear, string c)
 			ofstream seek2;
 			seek1.open("student-1-2.txt");
 			seek2.open("temp.txt");
-			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			cout << "1-Edit Username   2-Edit Password" << endl; 
+			cin >> n;
 			if (n == 1)
 			{
-				cout << "enter your old username\n";
+				cout << "Enter your Old Username\n";
 				cin.ignore();
 				getline(cin, user);
-				cout << "Enter the new username\n";
+				cout << "Enter the New Username\n";
 				getline(cin, newUserName);
 
 				while (getline(seek1, temp))
@@ -268,7 +269,7 @@ void Student::edite(int academicYear, string c)
 			}
 			else if (n == 2)
 			{
-				cout << "enter your old password\n";
+				cout << "Enter your old password\n";
 				cin.ignore();
 				getline(cin, pass);
 				cout << "Enter the new passwoed\n";
@@ -299,10 +300,10 @@ void Student::edite(int academicYear, string c)
 			ofstream seek2;
 			seek1.open("student-1-3.txt");
 			seek2.open("temp.txt");
-			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			cout << "1-Edit username   2-Edit password" << endl; cin >> n;
 			if (n == 1)
 			{
-				cout << "enter your old username\n";
+				cout << "Enter your old username\n";
 				cin.ignore();
 				getline(cin, user);
 				cout << "Enter the new username\n";
@@ -324,7 +325,7 @@ void Student::edite(int academicYear, string c)
 			}
 			else if (n == 2)
 			{
-				cout << "enter your old password\n";
+				cout << "Enter your old password\n";
 				cin.ignore();
 				getline(cin, pass);
 				cout << "Enter the new passwoed\n";
@@ -359,7 +360,7 @@ void Student::edite(int academicYear, string c)
 			ofstream seek2;
 			seek1.open("student-2-1.txt");
 			seek2.open("temp.txt");
-			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			cout << "1-Edit username   2-Edit password" << endl; cin >> n;
 			if (n == 1)
 			{
 				cout << "enter your old username\n";
@@ -384,7 +385,7 @@ void Student::edite(int academicYear, string c)
 			}
 			else if (n == 2)
 			{
-				cout << "enter your old password\n";
+				cout << "Enter your old password\n";
 				cin.ignore();
 				getline(cin, pass);
 				cout << "Enter the new passwoed\n";
@@ -415,10 +416,10 @@ void Student::edite(int academicYear, string c)
 			ofstream seek2;
 			seek1.open("student-2-2.txt");
 			seek2.open("temp.txt");
-			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			cout << "1-Edit username   2-Edit password" << endl; cin >> n;
 			if (n == 1)
 			{
-				cout << "enter your old username\n";
+				cout << "Enter your old username\n";
 				cin.ignore();
 				getline(cin, user);
 				cout << "Enter the new username\n";
@@ -440,7 +441,7 @@ void Student::edite(int academicYear, string c)
 			}
 			else if (n == 2)
 			{
-				cout << "enter your old password\n";
+				cout << "Enter your old password\n";
 				cin.ignore();
 				getline(cin, pass);
 				cout << "Enter the new passwoed\n";
@@ -471,10 +472,10 @@ void Student::edite(int academicYear, string c)
 			ofstream seek2;
 			seek1.open("student-2-3.txt");
 			seek2.open("temp.txt");
-			cout << "1-edit username   2-edit password" << endl; cin >> n;
+			cout << "1-Edit username   2-Edit password" << endl; cin >> n;
 			if (n == 1)
 			{
-				cout << "enter your old username\n";
+				cout << "Enter your old username\n";
 				cin.ignore();
 				getline(cin, user);
 				cout << "Enter the new username\n";
@@ -496,7 +497,7 @@ void Student::edite(int academicYear, string c)
 			}
 			else if (n == 2)
 			{
-				cout << "enter your old password\n";
+				cout << "Enter your old password\n";
 				cin.ignore();
 				getline(cin, pass);
 				cout << "Enter the new passwoed\n";

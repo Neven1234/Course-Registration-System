@@ -10,8 +10,8 @@ using namespace std;
 Student s;
 fstream filesem;
 
-string CourseName, code;
-int max_num_of_students, hours;
+string CourseName, code,newCourseName,newcode;
+int max_num_of_students, hours,newMaximum,newHours;
 
 void Admin::long_in()
 {
@@ -158,29 +158,430 @@ void Admin::AddCourse()
 }
 
 
-
-
-
-
-
-void Admin::EditCourses()
+void Admin::EditCourses(int semster)
 {
-	cout << "Enter Semester" << endl;
-	cin >> s.semster;
-	if (s.semster == 1)
+	int n;
+	string temp;
+	ifstream seek1;
+	ofstream seek2;
+	
+	if (semster == 1)
 	{
-		filesem.open("Semster1.txt", fstream::out | fstream::app);
-	}
-	if (s.semster == 2)
-	{
+		seek1.open("Semster1.txt");
+		seek2.open("temp.txt");
+		cout << "1-Edit Code   2-Edit Cours Name"    "3-Edit Maximum Nmber of Students"
+			"4-Edit Course Hours" << endl;
+		cin >> n;
+		if (n == 1)
+		{
+			cout << "Enter your old Code\n";
+			cin.ignore();
+			getline(cin, code);
+			cout << "Enter the new Code\n";
+			getline(cin, newcode);
 
-	}
-	if (s.semster == 3)
-	{
+			while (getline(seek1, temp))
+			{
+				if (temp.find(code) != string::npos)
+				{
+					temp.replace(temp.find(code), code.length(), newcode);
+				}
+				seek2 << temp << endl;
 
-	}
-	if (s.semster == 4)
-	{
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster1.txt");
+			rename("temp.txt", "Semster1.txt");
+		}
 
+		if (n == 2)
+		{
+			cout << "Enter your old Course Name\n";
+			cin.ignore();
+			getline(cin, CourseName);
+			cout << "Enter the new Course Name\n";
+			getline(cin, newCourseName);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(CourseName) != string::npos)
+				{
+					temp.replace(temp.find(CourseName), CourseName.length(), newCourseName);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster1.txt");
+			rename("temp.txt", "Semster1.txt");
+		}
+
+		if (n == 3)
+		{
+			cout << "Enter your old Maximum Number Of Students\n";
+			string maxnumofstudents = to_string(max_num_of_students);
+			cin.ignore();
+			getline(cin, maxnumofstudents);
+			cout << "Enter the new Maximum Number Of Students\n";
+			string SnewMaximumw = to_string(newMaximum);
+			getline(cin, SnewMaximumw);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(max_num_of_students) != string::npos)
+				{
+					temp.replace(temp.find(max_num_of_students), code.length(), SnewMaximumw);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster1.txt");
+			rename("temp.txt", "Semster1.txt");
+		}
+
+		if (n == 4)
+		{
+			cout << "Enter your old Course Hours\n";
+			string Shours = to_string(hours);
+			string SnewHours = to_string(newHours);
+			cin.ignore();
+			getline(cin, Shours);
+			cout << "Enter the new Course Hours\n";
+			getline(cin, Shours);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(Shours) != string::npos)
+				{
+					temp.replace(temp.find(Shours), code.length(), SnewHours);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster1.txt");
+			rename("temp.txt", "Semster1.txt");
+		}
 	}
+
+
+	if (semster == 2)
+	{
+		seek1.open("Semster2.txt");
+		seek2.open("temp.txt");
+		cout << "1-Edit Code   2-Edit Cours Name"    "3-Edit Maximum Nmber of Students"
+			"4-Edit Course Hours" << endl;
+		cin >> n;
+		if (n == 1)
+		{
+			cout << "Enter your old Code\n";
+			cin.ignore();
+			getline(cin, code);
+			cout << "Enter the new Code\n";
+			getline(cin, newcode);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(code) != string::npos)
+				{
+					temp.replace(temp.find(code), code.length(), newcode);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster2.txt");
+			rename("temp.txt", "Semster2.txt");
+		}
+
+		if (n == 2)
+		{
+			cout << "Enter your old Course Name\n";
+			cin.ignore();
+			getline(cin, CourseName);
+			cout << "Enter the new Course Name\n";
+			getline(cin, newCourseName);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(CourseName) != string::npos)
+				{
+					temp.replace(temp.find(CourseName), CourseName.length(), newCourseName);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster2.txt");
+			rename("temp.txt", "Semster2.txt");
+		}
+
+		if (n == 3)
+		{
+			cout << "Enter your old Maximum Number Of Students\n";
+			string maxnumofstudents = to_string(max_num_of_students);
+			cin.ignore();
+			getline(cin, maxnumofstudents);
+			cout << "Enter the new Maximum Number Of Students\n";
+			string SnewMaximumw = to_string(newMaximum);
+			getline(cin, SnewMaximumw);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(max_num_of_students) != string::npos)
+				{
+					temp.replace(temp.find(max_num_of_students), code.length(), SnewMaximumw);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster2.txt");
+			rename("temp.txt", "Semster2.txt");
+		}
+
+		if (n == 4)
+		{
+			cout << "Enter your old Course Hours\n";
+			string Shours = to_string(hours);
+			string SnewHours = to_string(newHours);
+			cin.ignore();
+			getline(cin, Shours);
+			cout << "Enter the new Course Hours\n";
+			getline(cin, Shours);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(Shours) != string::npos)
+				{
+					temp.replace(temp.find(Shours), code.length(), SnewHours);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster2.txt");
+			rename("temp.txt", "Semster2.txt");
+		}
+	}
+
+
+	if (semster == 3)
+	{
+		seek1.open("Semster3.txt");
+		seek2.open("temp.txt");
+		cout << "1-Edit Code   2-Edit Cours Name"    "3-Edit Maximum Nmber of Students"
+			"4-Edit Course Hours" << endl;
+		cin >> n;
+		if (n == 1)
+		{
+			cout << "Enter your old Code\n";
+			cin.ignore();
+			getline(cin, code);
+			cout << "Enter the new Code\n";
+			getline(cin, newcode);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(code) != string::npos)
+				{
+					temp.replace(temp.find(code), code.length(), newcode);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster3.txt");
+			rename("temp.txt", "Semster3.txt");
+		}
+
+		if (n == 2)
+		{
+			cout << "Enter your old Course Name\n";
+			cin.ignore();
+			getline(cin, CourseName);
+			cout << "Enter the new Course Name\n";
+			getline(cin, newCourseName);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(CourseName) != string::npos)
+				{
+					temp.replace(temp.find(CourseName), CourseName.length(), newCourseName);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster3.txt");
+			rename("temp.txt", "Semster3.txt");
+		}
+
+		if (n == 3)
+		{
+			cout << "Enter your old Maximum Number Of Students\n";
+			string maxnumofstudents = to_string(max_num_of_students);
+			cin.ignore();
+			getline(cin, maxnumofstudents);
+			cout << "Enter the new Maximum Number Of Students\n";
+			string SnewMaximumw = to_string(newMaximum);
+			getline(cin, SnewMaximumw);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(max_num_of_students) != string::npos)
+				{
+					temp.replace(temp.find(max_num_of_students), code.length(), SnewMaximumw);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster3.txt");
+			rename("temp.txt", "Semster3.txt");
+		}
+
+		if (n == 4)
+		{
+			cout << "Enter your old Course Hours\n";
+			string Shours = to_string(hours);
+			string SnewHours = to_string(newHours);
+			cin.ignore();
+			getline(cin, Shours);
+			cout << "Enter the new Course Hours\n";
+			getline(cin, Shours);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(Shours) != string::npos)
+				{
+					temp.replace(temp.find(Shours), code.length(), SnewHours);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster3.txt");
+			rename("temp.txt", "Semster3.txt");
+		}
+	}
+
+
+	if (semster == 4)
+	{
+		seek1.open("Semster4.txt");
+		seek2.open("temp.txt");
+		cout << "1-Edit Code   2-Edit Cours Name"    "3-Edit Maximum Nmber of Students"
+			"4-Edit Course Hours" << endl;
+		cin >> n;
+		if (n == 1)
+		{
+			cout << "Enter your old Code\n";
+			cin.ignore();
+			getline(cin, code);
+			cout << "Enter the new Code\n";
+			getline(cin, newcode);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(code) != string::npos)
+				{
+					temp.replace(temp.find(code), code.length(), newcode);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster4.txt");
+			rename("temp.txt", "Semster4.txt");
+		}
+
+		if (n == 2)
+		{
+			cout << "Enter your old Course Name\n";
+			cin.ignore();
+			getline(cin, CourseName);
+			cout << "Enter the new Course Name\n";
+			getline(cin, newCourseName);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(CourseName) != string::npos)
+				{
+					temp.replace(temp.find(CourseName), CourseName.length(), newCourseName);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster4.txt");
+			rename("temp.txt", "Semster4.txt");
+		}
+
+		if (n == 3)
+		{
+			cout << "Enter your old Maximum Number Of Students\n";
+			string maxnumofstudents = to_string(max_num_of_students);
+			cin.ignore();
+			getline(cin, maxnumofstudents);
+			cout << "Enter the new Maximum Number Of Students\n";
+			string SnewMaximumw = to_string(newMaximum);
+			getline(cin, SnewMaximumw);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(max_num_of_students) != string::npos)
+				{
+					temp.replace(temp.find(max_num_of_students), code.length(), SnewMaximumw);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster4.txt");
+			rename("temp.txt", "Semster4.txt");
+		}
+
+		if (n == 4)
+		{
+			cout << "Enter your old Course Hours\n";
+			string Shours = to_string(hours);
+			string SnewHours = to_string(newHours);
+			cin.ignore();
+			getline(cin, Shours);
+			cout << "Enter the new Course Hours\n";
+			getline(cin, Shours);
+
+			while (getline(seek1, temp))
+			{
+				if (temp.find(Shours) != string::npos)
+				{
+					temp.replace(temp.find(Shours), code.length(), SnewHours);
+				}
+				seek2 << temp << endl;
+
+			}
+			seek1.close();
+			seek2.close();
+			remove("Semster4.txt");
+			rename("temp.txt", "Semster4.txt");
+		}
+	}
+
 }

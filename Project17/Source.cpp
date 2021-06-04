@@ -17,11 +17,11 @@ int main()
 	if (userChoice == 1)
 	{
 		admin.long_in();
-		if (!admin.isTrue)
-		{
-			cout << endl;
-			cout << "Wrong data!" << endl;
-			admin.long_in();
+		//if (!admin.isTrue)
+		//{
+		//	cout << endl;
+		//	cout << "Wrong data!" << endl;
+		//}
 			cout << "Enter Your Choice" << endl;
 			cout << endl;
 			cout << "1-Add new Student" << "\n" << "2-Add new Course" << "\n" << "3-Enter Course Prerequisite" << "\n"
@@ -57,14 +57,16 @@ int main()
 
 			if (adminChoice == 6)
 			{
-				admin.EditCourses();
+				cout << "Enter Semester" << endl;
+				cin >> student.semster;
+				admin.EditCourses(student.semster);
 			}
 			while (adminChoice == 7)
 			{
 				break;
 			}
 		}
-	}
+	
 		else if (userChoice == 2)
 		{
 			cout << "Enter Your Semester" << endl;

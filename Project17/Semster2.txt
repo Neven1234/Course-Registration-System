@@ -1,4 +1,4 @@
 CIS150	        Structured Programming	           1000              3	              CIS160. Introduction to Computer Sciences
-CIS124	        Electronics	                   900               4	              BSC121. Physics 1
+CIS1204	        Electronics	                   900               4	              BSC121. Physics 1
 BSC125	        Calculus 2	                   850               3	              BSC122. Calculus 1
 BSC126	        Physics 2	                   800               3                BSC121. Physics 1
