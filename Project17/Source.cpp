@@ -36,6 +36,24 @@ int main()
 			{
 				admin.AddCourse();
 			}
+			if (adminChoice == 3)
+			{
+
+
+
+			}
+
+			if (adminChoice == 4)
+			{
+				
+
+			}
+			if (adminChoice == 5)
+			{
+				
+
+
+			}
 
 			if (adminChoice == 6)
 			{
@@ -73,7 +91,7 @@ int main()
 				}
 				if (studentChoice == 2)
 				{
-
+					student.search1();
 				}
 				if (studentChoice == 3)
 				{
@@ -103,11 +121,11 @@ int main()
 				cin >> studentChoice;
 				if (studentChoice == 1)
 				{
-					student.display1();
+					student.display2();
 				}
 				if (studentChoice == 2)
 				{
-
+					student.search2();
 				}
 				if (studentChoice == 3)
 				{
@@ -137,11 +155,11 @@ int main()
 				cin >> studentChoice;
 				if (studentChoice == 1)
 				{
-					student.display1();
+					student.display3();
 				}
 				if (studentChoice == 2)
 				{
-
+					student.search3();
 				}
 				if (studentChoice == 3)
 				{
@@ -171,11 +189,11 @@ int main()
 				cin >> studentChoice;
 				if (studentChoice == 1)
 				{
-					student.display1();
+					student.display4();
 				}
 				if (studentChoice == 2)
 				{
-
+					student.search4();
 				}
 				if (studentChoice == 3)
 				{

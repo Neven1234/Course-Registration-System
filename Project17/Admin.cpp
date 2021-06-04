@@ -159,30 +159,7 @@ void Admin::AddCourse()
 
 
 
-void Admin::SearchCourses()
-{
-	cout << "Enter Semester" << endl;
-	cin >> s.semster;
-	if (s.semster == 1)
-	{
-		filesem.open("Semster1.txt", fstream::out | fstream::app);
-		cout << "Enter Course Code" << endl;
-		cin >> code;
 
-	}
-	if (s.semster == 2)
-	{
-
-	}
-	if (s.semster == 3)
-	{
-
-	}
-	if (s.semster == 4)
-	{
-
-	}
-}
 
 
 
