@@ -156,7 +156,59 @@ void Admin::AddCourse()
 		cout << "Course Has been Added Successfully" << endl;
 	}
 }
+void Admin::searchOfStudent()
+{
+	vector<string> v;
+	string us, class1, class2, class3, class4;
+	cout << "enter the Academic Year" << endl;
+	cin >> s.academicYear;
+	cout << "enter student name" << endl;
+	cin.ignore();
+	getline(cin, s.username);
+	if (s.academicYear == 1)
+	{
+		for (int i = 1; i <= s.Files; i++)
+		{
+			string tst = "student-1-" + s.count + ".txt";
+			filesem.open(tst, ios::in);
+			int counter = stoi(s.count);
+			getline(filesem, us);
+			if (us == s.username)
+			{
+				if (filesem.is_open())
+				{
+					getline(filesem, s.username);
+					getline(filesem, s.password);
+					getline(filesem, class1);
+					v.push_back(class1);
+					getline(filesem, class2);
+					v.push_back(class1);
+					getline(filesem, class3);
+					v.push_back(class1);
+					getline(filesem, class4);
+					v.push_back(class1);
 
+				}
+				vector<string>::iterator it;
+				it = v.begin();
+				cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
+				while (it != v.end())
+				{
+
+					cout << *it << endl;
+					it++;
+				}
+				filesem.close();
+			}
+
+			counter++;
+			stringstream ss;
+			ss << counter;
+			ss >> s.count;
+
+		}
+	}
+}
 
 void Admin::EditCourses(int semster)
 {

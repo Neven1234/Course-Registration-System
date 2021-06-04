@@ -522,6 +522,220 @@ void Student::edite(int academicYear, string c)
 	}
 
 }
+void Student::displayYourCourses(int academicYear, string c)
+{
+	vector<string> course;
+	vector<string> courses2;
+	string us, pass, class1, class2, class3, class4, class5, class6, class7, class8;
+	fstream displayCourses;
+	int countLine = 0;
+	string line;
+	if (academicYear == 1)
+	{
+
+		if (c == "1")
+		{
+			displayCourses.open("student-1-1.txt", ios::in);
+			while (getline(displayCourses, line))
+			{
+				countLine++;
+			}
+			if (countLine == 2)
+			{
+				cout << "There is no Registered Course " << endl;
+			}
+			else if (countLine == 6)
+			{
+				if (displayCourses.is_open())
+				{
+					getline(displayCourses, us);
+					getline(displayCourses, pass);
+					getline(displayCourses, class1);
+					course.push_back(class1);
+					getline(displayCourses, class2);
+					course.push_back(class2);
+					getline(displayCourses, class3);
+					course.push_back(class3);
+					getline(displayCourses, class4);
+					course.push_back(class4);
+				}
+				vector<string>::iterator it;
+				it = course.begin();
+				cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
+				while (it != course.end())
+				{
+
+					cout << *it << endl;
+					it++;
+				}
+				displayCourses.close();
+			}
+			else if (countLine == 10)
+			{
+				if (displayCourses.is_open())
+				{
+					getline(displayCourses, us);
+					getline(displayCourses, pass);
+					getline(displayCourses, class1);
+					course.push_back(class1);
+					getline(displayCourses, class2);
+					course.push_back(class2);
+					getline(displayCourses, class3);
+					course.push_back(class3);
+					getline(displayCourses, class4);
+					course.push_back(class4);
+					getline(displayCourses, class5);
+					courses2.push_back(class5);
+					getline(displayCourses, class6);
+					courses2.push_back(class6);
+					getline(displayCourses, class7);
+					courses2.push_back(class7);
+					getline(displayCourses, class8);
+					courses2.push_back(class8);
+
+				}
+				vector<string>::iterator it;
+				it = course.begin();
+				cout << "finished courses :" << endl;
+				cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
+				while (it != course.end())
+				{
+
+					cout << *it << endl;
+					it++;
+				}
+				cout << "courses you registed for :" << endl;
+				cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
+				while (it != courses2.end())
+				{
+
+					cout << *it << endl;
+					it++;
+				}
+				displayCourses.close();
+			}
+		}
+
+		else if (c == "2")
+		{
+			displayCourses.open("student-1-2.txt", ios::in);
+			while (getline(displayCourses, line))
+			{
+				countLine++;
+			}
+			if (countLine == 2)
+			{
+				cout << "There is no Registered Course " << endl;
+			}
+			else if (countLine == 6)
+			{
+				if (displayCourses.is_open())
+				{
+					getline(displayCourses, us);
+					getline(displayCourses, pass);
+					getline(displayCourses, class1);
+					course.push_back(class1);
+					getline(displayCourses, class2);
+					course.push_back(class2);
+					getline(displayCourses, class3);
+					course.push_back(class3);
+					getline(displayCourses, class4);
+					course.push_back(class4);
+				}
+				vector<string>::iterator it;
+				it = course.begin();
+				cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
+				while (it != course.end())
+				{
+
+					cout << *it << endl;
+					it++;
+				}
+				displayCourses.close();
+			}
+		}
+	}
+	if (academicYear == 2)
+	{
+
+		if (c == "1")
+		{
+			displayCourses.open("student-1-2.txt", ios::in);
+			while (getline(displayCourses, line))
+			{
+				countLine++;
+			}
+			if (countLine == 2)
+			{
+				cout << "There is no Registered Course " << endl;
+			}
+			else if (countLine == 6)
+			{
+				if (displayCourses.is_open())
+				{
+					getline(displayCourses, us);
+					getline(displayCourses, pass);
+					getline(displayCourses, class1);
+					course.push_back(class1);
+					getline(displayCourses, class2);
+					course.push_back(class2);
+					getline(displayCourses, class3);
+					course.push_back(class3);
+					getline(displayCourses, class4);
+					course.push_back(class4);
+				}
+				vector<string>::iterator it;
+				it = course.begin();
+				cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
+				while (it != course.end())
+				{
+
+					cout << *it << endl;
+					it++;
+				}
+				displayCourses.close();
+			}
+		}
+		else if (c == "2")
+		{
+			displayCourses.open("student-2-2.txt", ios::in);
+			while (getline(displayCourses, line))
+			{
+				countLine++;
+			}
+			if (countLine == 2)
+			{
+				cout << "There is no Registered Course " << endl;
+			}
+			else if (countLine == 6)
+			{
+				if (displayCourses.is_open())
+				{
+					getline(displayCourses, us);
+					getline(displayCourses, pass);
+					getline(displayCourses, class1);
+					course.push_back(class1);
+					getline(displayCourses, class2);
+					course.push_back(class2);
+					getline(displayCourses, class3);
+					course.push_back(class3);
+					getline(displayCourses, class4);
+					course.push_back(class4);
+				}
+				vector<string>::iterator it;
+				it = course.begin();
+				cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
+				while (it != course.end())
+				{
+
+					cout << *it << endl;
+					it++;
+				}
+				displayCourses.close();
+			}
+		}
+	}
+}
 void Student::display1()
 {
 

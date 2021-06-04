@@ -10,5 +10,6 @@ public:
 	void addStudent();
 	void EditCourses(int semester);
 	void AddCourse();
+	void searchOfStudent();
 };
 

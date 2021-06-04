@@ -17,17 +17,18 @@ int main()
 	if (userChoice == 1)
 	{
 		admin.long_in();
-		//if (!admin.isTrue)
-		//{
-		//	cout << endl;
-		//	cout << "Wrong data!" << endl;
-		//}
-			cout << "Enter Your Choice" << endl;
+		if (!admin.isTrue)
+		{
 			cout << endl;
-			cout << "1-Add new Student" << "\n" << "2-Add new Course" << "\n" << "3-Enter Course Prerequisite" << "\n"
-				<< "4-View Students in Specific course" << "\n" << "5-View all courses in Specific Student" << "\n"
-				<< "6-Edit Courses Data" << "\n" << "7-Log out" << endl;
-			cin >> adminChoice;
+			cout << "Wrong data!" << endl;
+			admin.long_in();
+		}
+		cout << "Enter Your Choice" << endl;
+		cout << endl;
+		cout << "1-Add new Student" << endl << "2-Add new Course" << endl << "3-Enter Course Prerequisite" << endl
+			<< endl << "4-View all courses in Specific Student" << endl
+			<< "5-Edit Courses Data" << endl << "6-Log out" << endl;
+		cin >> adminChoice;
 			if (adminChoice == 1)
 			{
 				admin.addStudent();
@@ -45,23 +46,17 @@ int main()
 
 			if (adminChoice == 4)
 			{
-				
-
+				admin.searchOfStudent();
 			}
 			if (adminChoice == 5)
 			{
 				
-
-
-			}
-
-			if (adminChoice == 6)
-			{
 				cout << "Enter Semester" << endl;
 				cin >> student.semster;
 				admin.EditCourses(student.semster);
+
 			}
-			while (adminChoice == 7)
+			while (adminChoice == 6)
 			{
 				break;
 			}
@@ -101,7 +96,8 @@ int main()
 				}
 				if (studentChoice == 4)
 				{
-
+					student.displayYourCourses(student.academicYear, student.count);
+				
 				}
 				if (studentChoice == 5)
 				{
@@ -135,7 +131,7 @@ int main()
 				}
 				if (studentChoice == 4)
 				{
-
+					student.displayYourCourses(student.academicYear, student.count);
 				}
 				if (studentChoice == 5)
 				{
@@ -169,7 +165,7 @@ int main()
 				}
 				if (studentChoice == 4)
 				{
-
+					student.displayYourCourses(student.academicYear, student.count);
 				}
 				if (studentChoice == 5)
 				{
@@ -203,7 +199,7 @@ int main()
 				}
 				if (studentChoice == 4)
 				{
-
+					student.displayYourCourses(student.academicYear, student.count);
 				}
 				if (studentChoice == 5)
 				{
