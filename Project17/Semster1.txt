@@ -2,3 +2,4 @@
 2-BSC121	        Physics1                         1100                    3	     --
 3-BSC122	        Calculus1                        900                     3	     --
 4-BSC123	      Probability and Statistics         950                     3           --
+
