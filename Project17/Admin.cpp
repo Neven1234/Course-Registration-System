@@ -48,28 +48,27 @@ void Admin::long_in()
 
 void Admin::addStudent()
 {
+	string year;
 	cout << "Enter Student Year" << endl;
-	 cin >> s.academicYear;
+	 cin >> year;
 	cout << "Student Number" << endl;
 	string count;
 	cin >> count;
 	cout << "Enter Student Name:";
-	s.username;
+	string username;
 	cin.ignore();
-	getline(cin, s.username);
-	cout << "Enter Student Passowrd: " << endl;
-	cin.ignore();
-	getline(cin, s.password);
-	cout << "Enter Student ID: ";
-	cin >> s.id;
-
-	string filename = "Student-" + s.academicYear + '-' + count+".txt";
+	getline(cin, username);
+	cout << "Passowrd: 1234" << endl;
+	string password = "1234";
+	string filename = "Student-" + year + '-' + count+".txt";
 	fstream year_sem;
 	year_sem.open(filename, ios::out | ios::app);
-	year_sem << s.username << endl << s.password << endl << s.id  << endl;
+	year_sem << username << endl << password << endl;
 	year_sem.close();
 	s.Files++;
 }
+
+
 
 void Admin::AddCourse()
 {
@@ -156,6 +155,9 @@ void Admin::AddCourse()
 		cout << "Course Has been Added Successfully" << endl;
 	}
 }
+
+
+
 void Admin::searchOfStudent()
 {
 	vector<string> v;
@@ -182,11 +184,11 @@ void Admin::searchOfStudent()
 					getline(filesem, class1);
 					v.push_back(class1);
 					getline(filesem, class2);
-					v.push_back(class1);
+					v.push_back(class2);
 					getline(filesem, class3);
-					v.push_back(class1);
+					v.push_back(class3);
 					getline(filesem, class4);
-					v.push_back(class1);
+					v.push_back(class4);
 
 				}
 				vector<string>::iterator it;
@@ -209,6 +211,8 @@ void Admin::searchOfStudent()
 		}
 	}
 }
+
+
 
 void Admin::EditCourses(int semster)
 {
@@ -636,4 +640,69 @@ void Admin::EditCourses(int semster)
 		}
 	}
 
+}
+
+
+
+void Admin::displayStudentsCourse()
+{
+
+	string class1, class2, class3, class4;
+	if (s.academicYear == 1)
+	{
+		for (int i = 1; i <= 2; i++)
+		{
+			string tst = "student-1-" + s.count + ".txt";
+			filesem.open(tst, ios::in);
+			int counter = stoi(s.count);
+			if (filesem.is_open())
+			{
+				cout << " Enter the Code of the Course" << endl;
+
+				cin >> code;
+				getline(filesem, s.username);
+				getline(filesem, s.password);
+				getline(filesem, class1);
+				getline(filesem, class2);
+				getline(filesem, class3);
+				getline(filesem, class4);
+				if (code == class1 || code == class2 || code == class3 || code == class4)
+				{
+					cout << s.username;
+				}
+				counter++;
+				stringstream ss;
+				ss << counter;
+				ss >> s.count;
+			}
+		}
+   }
+	if (s.academicYear == 2)
+	{
+		for (int i = 1; i <= 2; i++)
+		{
+
+
+			string tst = "student-2-" + s.count + ".txt";
+			filesem.open(tst, ios::in);
+			int counter = stoi(s.count);
+			if (filesem.is_open())
+			{
+				getline(filesem, s.username);
+				getline(filesem, s.password);
+				getline(filesem, class1);
+				getline(filesem, class2);
+				getline(filesem, class3);
+				getline(filesem, class4);
+				if (code == class1 || code == class2 || code == class3 || code == class4)
+				{
+					cout << s.username;
+				}
+				counter++;
+				stringstream ss;
+				ss << counter;
+				ss >> s.count;
+			}
+		}
+	}
 }

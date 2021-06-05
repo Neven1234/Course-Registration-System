@@ -11,24 +11,25 @@ int main()
 	Admin admin;
 	string email, password, academicYear;
 	int n, userChoice, adminChoice, studentChoice;
-
-	cout << "1-Admin 2-Student" << endl;
-	cin >> userChoice;
-	if (userChoice == 1)
+	while (true)
 	{
-		admin.long_in();
-		if (!admin.isTrue)
+		cout << "1-Admin 2-Student" << endl;
+		cin >> userChoice;
+		if (userChoice == 1)
 		{
-			cout << endl;
-			cout << "Wrong data!" << endl;
 			admin.long_in();
-		}
-		cout << "Enter Your Choice" << endl;
-		cout << endl;
-		cout << "1-Add new Student" << endl << "2-Add new Course" << endl << "3-Enter Course Prerequisite" << endl
-			<< endl << "4-View all courses in Specific Student" << endl
-			<< "5-Edit Courses Data" << endl << "6-Log out" << endl;
-		cin >> adminChoice;
+			if (!admin.isTrue)
+			{
+				cout << endl;
+				cout << "Wrong data!" << endl;
+				admin.long_in();
+			}
+			cout << "Enter Your Choice" << endl;
+			cout << endl;
+			cout << "1-Add new Student" << endl << "2-Add new Course" << endl << "3-View Students in Specific Course" << endl
+				<< endl << "4-View all courses in Specific Student" << endl
+				<< "5-Edit Courses Data" << endl << "6-Log out" << endl;
+			cin >> adminChoice;
 			if (adminChoice == 1)
 			{
 				admin.addStudent();
@@ -40,7 +41,7 @@ int main()
 			if (adminChoice == 3)
 			{
 
-
+				admin.displayStudentsCourse();
 
 			}
 
@@ -50,7 +51,7 @@ int main()
 			}
 			if (adminChoice == 5)
 			{
-				
+
 				cout << "Enter Semester" << endl;
 				cin >> student.semster;
 				admin.EditCourses(student.semster);
@@ -61,7 +62,7 @@ int main()
 				break;
 			}
 		}
-	
+
 		else if (userChoice == 2)
 		{
 			cout << "Enter Your Semester" << endl;
@@ -97,11 +98,11 @@ int main()
 				if (studentChoice == 4)
 				{
 					student.displayYourCourses(student.academicYear, student.count);
-				
+
 				}
 				if (studentChoice == 5)
 				{
-					student.edite(student.academicYear,student.count);
+					student.edite(student.academicYear, student.count);
 				}
 				while (studentChoice == 6)
 				{
@@ -211,5 +212,5 @@ int main()
 				}
 			}
 		}
-
 	}
+}

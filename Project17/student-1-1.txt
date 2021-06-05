@@ -1,2 +1,10 @@
-Neven ahmed
+nevo 
 12345
+1-CIS160        Introduction to Computer Science         1000                    3           --
+2-BSC121	        Physics1                         1100                    3	     --
+3-BSC122	        Calculus1                        900                     3	     --
+4-BSC123	      Probability and Statistics         950                     3           --
+1-111       Introduction to Computer Science         1000                    3           --
+2-BSC121	        Physics1                         1100                    3	     --
+3-BSC122	        Calculus1                        900                     3	     --
+4-BSC123	      Probability and Statistics         950                     3           --

@@ -11,5 +11,6 @@ public:
 	void EditCourses(int semester);
 	void AddCourse();
 	void searchOfStudent();
+	void displayStudentsCourse();
 };
 

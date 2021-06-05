@@ -525,8 +525,7 @@ void Student::edite(int academicYear, string c)
 void Student::displayYourCourses(int academicYear, string c)
 {
 	vector<string> course;
-	vector<string> courses2;
-	string us, pass, class1, class2, class3, class4, class5, class6, class7, class8;
+	string us, pass, class1, class2, class3, class4;
 	fstream displayCourses;
 	int countLine = 0;
 	string line;
@@ -535,20 +534,23 @@ void Student::displayYourCourses(int academicYear, string c)
 
 		if (c == "1")
 		{
-			displayCourses.open("student-1-1.txt", ios::in);
+			displayCourses.open("student-1" + '-'+ c + ".txt", ios::in);
 			while (getline(displayCourses, line))
 			{
 				countLine++;
 			}
+			cout << countLine << endl; 
 			if (countLine == 2)
 			{
 				cout << "There is no Registered Course " << endl;
 			}
-			else if (countLine == 6)
+			else if (countLine > 2 )
 			{
 				if (displayCourses.is_open())
 				{
+					cin.ignore();
 					getline(displayCourses, us);
+					cout <<  us;
 					getline(displayCourses, pass);
 					getline(displayCourses, class1);
 					course.push_back(class1);
@@ -564,56 +566,12 @@ void Student::displayYourCourses(int academicYear, string c)
 				cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
 				while (it != course.end())
 				{
-
 					cout << *it << endl;
 					it++;
 				}
 				displayCourses.close();
 			}
-			else if (countLine == 10)
-			{
-				if (displayCourses.is_open())
-				{
-					getline(displayCourses, us);
-					getline(displayCourses, pass);
-					getline(displayCourses, class1);
-					course.push_back(class1);
-					getline(displayCourses, class2);
-					course.push_back(class2);
-					getline(displayCourses, class3);
-					course.push_back(class3);
-					getline(displayCourses, class4);
-					course.push_back(class4);
-					getline(displayCourses, class5);
-					courses2.push_back(class5);
-					getline(displayCourses, class6);
-					courses2.push_back(class6);
-					getline(displayCourses, class7);
-					courses2.push_back(class7);
-					getline(displayCourses, class8);
-					courses2.push_back(class8);
-
-				}
-				vector<string>::iterator it;
-				it = course.begin();
-				cout << "finished courses :" << endl;
-				cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
-				while (it != course.end())
-				{
-
-					cout << *it << endl;
-					it++;
-				}
-				cout << "courses you registed for :" << endl;
-				cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
-				while (it != courses2.end())
-				{
-
-					cout << *it << endl;
-					it++;
-				}
-				displayCourses.close();
-			}
+			
 		}
 
 		else if (c == "2")
@@ -795,6 +753,7 @@ void Student::search1()
 	else if (name == "Physics1")
 	{
 		cout << "Course Code             Course Name                  Maximum Students         Course Hours    Prerquistes" << endl;
+		cout << v[1] << endl;
 
 	}
 	else if (name == "Calculus1")
